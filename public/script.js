@@ -8,6 +8,9 @@ function toggle() {
     }
 }
 
+
+
+
 // typing loop
 var typed = new Typed(".text", {
     strings: ["Full Stack Web Developer", "Web Designer", "Web Developer"],

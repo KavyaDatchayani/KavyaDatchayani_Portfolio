@@ -7,20 +7,21 @@ body {
 }
 /* navbar */
 .navbar {
-  overflow: hidden;
+  /* overflow: hidden; */
+  text-align: right;
+  padding: 20px;
   background-color: #ecf9ff;
 }
 
 .navbar a {
-  text-align: right;
-  float: left;
-  display: block;
+  float: none;
+  display: inline-block;
   padding: 10px 15px;
   color: #95bdff;
   text-transform: uppercase;
   text-decoration: none;
   font-size: 20px;
-  margin: 1rem 2rem;
+  margin: 0 10px;
 }
 
 .navbar a:active {
@@ -99,16 +100,16 @@ body {
   content: "";
   position: absolute;
   width: 0;
-  height: 2px; /* Height of the underline */
+  height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #9400ff; /* Color of the underline */
-  transition: width 0.5s ease; /* Animation duration and easing */
+  background-color: #9400ff;
+  transition: width 0.5s ease;
 }
 
 /* Hover animation */
 .project-sec a:hover::before {
-  width: 100%; /* Expand the underline to 100% width on hover */
+  width: 100%;
 }
 
 .container a {
@@ -121,7 +122,6 @@ body {
   margin-left: 22%;
 }
 
-/* Basic card styles */
 .container .card {
   flex: 1;
   margin: 32px;
@@ -277,8 +277,8 @@ a .card-description:hover {
     display: none;
   }
   .navbar a.icon {
-    float: right;
-    display: block;
+    display: inline-block;
+    float: none;
   }
   /*   homepage */
   .homepage {
@@ -358,8 +358,8 @@ a .card-description:hover {
     display: none;
   }
   .navbar a.icon {
-    float: right;
-    display: block;
+    display: inline-block;
+    float: none;
   }
   /* home page */
   .homepage {
