@@ -7,21 +7,32 @@ body {
 }
 /* navbar */
 .navbar {
-  /* overflow: hidden; */
   text-align: right;
-  padding: 20px;
+  padding: 25px 9rem 25px 10px;
   background-color: #ecf9ff;
 }
 
 .navbar a {
   float: none;
   display: inline-block;
-  padding: 10px 15px;
+  padding: 10px 0 5px;
   color: #95bdff;
   text-transform: uppercase;
   text-decoration: none;
-  font-size: 20px;
-  margin: 0 10px;
+  font-size: 17px;
+  margin: 0 20px;
+  position: relative;
+}
+
+.navbar a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #9400ff;
+  transition: width 0.5s ease;
 }
 
 .navbar a:active {
@@ -33,6 +44,9 @@ body {
   color: #9400ff;
   border-radius: 60px;
 }
+.navbar a:hover::before {
+  width: 100%;
+}
 .navbar .icon {
   color: #9400ff;
   font-size: 30px;
@@ -43,6 +57,9 @@ body {
   cursor: pointer;
   color: #9400ff;
 }
+.navbar .icon:hover::before {
+  position: relative;
+}
 
 /* home */
 
@@ -50,20 +67,21 @@ body {
   background-color: #95bdff;
 }
 .homepage {
-  padding: 8rem 10rem 10rem 5rem;
+  padding: 6rem 7rem;
 }
 .homepage h3 {
   font-size: 20px;
   font-weight: 500;
+  padding: 0 8.5rem 2px;
 }
 .homepage h1 {
   margin-top: 30px;
-  padding-bottom: 1rem;
+  padding: 0 8.5rem 1.5rem;
   font-family: "Happy Monkey", cursive;
   font-size: 3rem;
 }
 .homepage h2 {
-  padding-bottom: 1rem;
+  padding: 0 8.5rem 1rem;
 }
 .text {
   font-family: "Happy Monkey", cursive;
@@ -72,8 +90,9 @@ body {
   color: #dfffd8;
 }
 .homepage p {
-  padding: 2rem 10rem 20px 0;
-  font-size: 17px;
+  padding: 2rem 10rem 20px 8.5rem;
+  font-size: 20px;
+  line-height: 1.5;
 }
 
 /* projects page */
@@ -85,15 +104,15 @@ body {
 
 .project-sec p {
   font-size: 20px;
-  padding: 5rem 12.5em 60px;
-  text-align: center;
+  padding: 5rem 15.5rem 60px;
   color: #9400ff;
   word-spacing: 4px;
+  line-height: 1.5;
 }
 
 .project-sec a {
   text-decoration: none;
-  color: #95bdff;
+  color: grey;
   position: relative;
 }
 .project-sec a::before {
@@ -105,6 +124,9 @@ body {
   left: 0;
   background-color: #9400ff;
   transition: width 0.5s ease;
+}
+.project-sec a:hover {
+  color: #95bdff;
 }
 
 /* Hover animation */
@@ -179,9 +201,10 @@ a .card-description:hover {
 
 #about {
   background-color: #ffffff;
-  padding: 20px 60px;
+  padding: 4.7rem 60px;
 }
 .aboutpage h2 {
+  text-align: center;
   color: #95bdff;
   padding: 4rem 30px 20px 3rem;
   font-size: 2.5rem;
@@ -189,9 +212,10 @@ a .card-description:hover {
 }
 .aboutpage p {
   color: #040d12;
-  font-size: 17px;
+  font-size: 19px;
   font-weight: 500;
-  padding: 20px 7rem 30px 7rem;
+  padding: 20px 13rem 30px;
+  line-height: 1.5;
 }
 .aboutpage a {
   color: #66bfbf;
@@ -214,8 +238,11 @@ a .card-description:hover {
 }
 
 /* contact page */
-.contactcontainer {
+#contact {
   background-color: #272829;
+  padding: 20px;
+}
+.contactcontainer {
   color: #b4e4ff;
   text-align: center;
 }
@@ -280,6 +307,9 @@ a .card-description:hover {
     display: inline-block;
     float: none;
   }
+  .navbar a:before {
+    position: relative;
+  }
   /*   homepage */
   .homepage {
     padding: 4rem 4rem 7rem 5rem;
@@ -287,15 +317,16 @@ a .card-description:hover {
   .homepage h3 {
     font-size: 20px;
     font-weight: 500;
+    padding: 0 4.5rem 0.5rem;
   }
   .homepage h1 {
     margin-top: 20px;
-    padding-bottom: 1rem;
+    padding: 0 4.5rem 1.5rem;
     font-family: "Happy Monkey", cursive;
     font-size: 2.5rem;
   }
   .homepage h2 {
-    padding-bottom: 1rem;
+    padding: 0 4.5rem 1.5rem;
     font-size: 20px;
   }
   .text {
@@ -305,13 +336,13 @@ a .card-description:hover {
     color: #dfffd8;
   }
   .homepage p {
-    padding: 2rem 7rem 20px 0;
+    padding: 0 4.5rem 1.5rem;
   }
 
   .project-sec p {
     font-size: 17px;
-    padding: 5rem 4.5em 30px;
-    text-align: center;
+    padding: 5rem 8.5em 30px;
+    text-align: left;
     color: #9400ff;
   }
 
@@ -320,13 +351,41 @@ a .card-description:hover {
   }
   .container {
     flex-direction: row;
-    margin-left: 18px;
+    margin: 5px 6rem;
   }
+
+  .container .card {
+    margin: 12px;
+    width: 300px;
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+  }
+
+  .card-content {
+    padding: 15px;
+  }
+
+  .container a .card-title {
+    font-size: 19px;
+  }
+
   .rows {
     flex: calc(50% - 10px);
   }
   .container .card {
     margin-left: 40px;
+  }
+  #about {
+    background-color: #ffffff;
+    padding: 2.7rem 20px;
+  }
+  .aboutpage p {
+    color: #040d12;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 10px 6rem 30px;
   }
 }
 
@@ -363,20 +422,21 @@ a .card-description:hover {
   }
   /* home page */
   .homepage {
-    padding: 3rem 1rem 2rem 2rem;
+    padding: 3rem 1rem 7rem 2rem;
   }
   .homepage h3 {
     font-size: 15px;
     font-weight: 500;
+    padding: 0 15px 10px;
   }
   .homepage h1 {
     margin-top: 15px;
-    padding-bottom: 1rem;
+    padding: 0 15px 1rem;
     font-family: "Happy Monkey", cursive;
     font-size: 25px;
   }
   .homepage h2 {
-    padding-bottom: 10px;
+    padding: 5px 15px 1rem;
     font-size: 15px;
   }
   .text {
@@ -387,8 +447,8 @@ a .card-description:hover {
   }
 
   .homepage p {
-    font-size: 17px;
-    padding: 1rem 1rem 80px 0;
+    font-size: 15px;
+    padding: 0 15px 1rem;
   }
 
   .project-sec p {
@@ -406,11 +466,9 @@ a .card-description:hover {
     display: block;
     margin-left: 18px;
   }
-  /*   .container .rows {
-    margin: 10px 30px 0 1rem;
-  } */
+
   .container .card {
-    max-width: 200px;
+    max-width: 300px;
     height: 200px;
   }
   .card-content {

@@ -1,3 +1,4 @@
+// navbar response
 function toggle() {
     var a = document.getElementById("mynavbar");
     if (a.className === "navbar") {
@@ -7,7 +8,6 @@ function toggle() {
         a.className = "navbar";
     }
 }
-
 
 
 
