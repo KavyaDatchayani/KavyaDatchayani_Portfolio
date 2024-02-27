@@ -14,10 +14,14 @@ app.use(bodyParser.urlencoded({
 app.get("/", (req, res) => {
 
     res.sendFile(__dirname + "/index.html");
-})
+});
+
+app.get("/resume", (req, res) => {
+    res.sendFile(__dirname + "/resume.html");
+});
 
 const port = 3000;
 
 app.listen(port, () => {
-    console.log("Iam listening do your work!");
+    console.log("Iam listening to Port 3000, Do your work!");
 })

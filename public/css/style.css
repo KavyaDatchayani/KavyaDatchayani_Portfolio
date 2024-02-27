@@ -8,15 +8,16 @@ body {
 /* navbar */
 .navbar {
   text-align: right;
-  padding: 25px 9rem 25px 10px;
-  background-color: #ecf9ff;
+  padding: 15px 9rem 15px 10px;
+  background-color: #eeeeee;
+  transition: padding 1s ease;
 }
 
 .navbar a {
   float: none;
   display: inline-block;
   padding: 10px 0 5px;
-  color: #95bdff;
+  color: grey;
   text-transform: uppercase;
   text-decoration: none;
   font-size: 17px;
@@ -31,7 +32,7 @@ body {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #9400ff;
+  background-color: #332fd0;
   transition: width 0.5s ease;
 }
 
@@ -41,21 +42,21 @@ body {
 }
 
 .navbar a:hover {
-  color: #9400ff;
+  color: #032030;
   border-radius: 60px;
 }
 .navbar a:hover::before {
   width: 100%;
 }
 .navbar .icon {
-  color: #9400ff;
+  color: #006da4;
   font-size: 30px;
   display: none;
   margin-right: 20px;
 }
 .navbar .icon:hover {
   cursor: pointer;
-  color: #9400ff;
+  color: #006da4;
 }
 .navbar .icon:hover::before {
   position: relative;
@@ -64,7 +65,9 @@ body {
 /* home */
 
 #home {
-  background-color: #95bdff;
+  background-color: #032030;
+
+  color: #eeeeee;
 }
 .homepage {
   padding: 6rem 7rem;
@@ -87,7 +90,7 @@ body {
   font-family: "Happy Monkey", cursive;
   font-weight: 400;
   font-size: 45px;
-  color: #dfffd8;
+  color: #006da4;
 }
 .homepage p {
   padding: 2rem 10rem 20px 8.5rem;
@@ -100,14 +103,14 @@ img {
 /* projects page */
 
 #projects {
-  background-color: #ecf9ff;
+  background-color: #ffffff;
   padding-bottom: 40px;
 }
 
 .project-sec p {
   font-size: 20px;
   padding: 5rem 15.5rem 60px;
-  color: #9400ff;
+  color: #006da4;
   word-spacing: 4px;
   line-height: 1.5;
 }
@@ -121,53 +124,48 @@ img {
   content: "";
   position: absolute;
   width: 0;
-  height: 2px;
+  height: 1.5px;
   bottom: 0;
   left: 0;
-  background-color: #9400ff;
+  background-color: #332fd0;
   transition: width 0.5s ease;
 }
 .project-sec a:hover {
-  color: #95bdff;
+  color: #032030;
 }
 
-/* Hover animation */
 .project-sec a:hover::before {
   width: 100%;
 }
-
-.container a {
-  padding: 2rem;
-}
-
 .container {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 22%;
+  align-items: center;
 }
 
 .container .card {
   flex: 1;
-  margin: 32px;
-  width: 300px;
-  height: 200px;
+  margin: 40px;
+  width: 250px;
+  height: 300px;
   background-size: cover;
   background-position: center;
-  border: 1px solid #ddd;
+  border: 1px solid transparent;
   border-radius: 10px;
   overflow: hidden;
   position: relative;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 20px rgba(78, 22, 22, 0.2);
 }
 
 .card:hover {
   transform: scale(1.09);
-  box-shadow: 0 10px 20px rgba(78, 22, 22, 0.2);
 }
 
 .card-content {
-  background-color: #9400ff;
+  background-color: transparent;
+  border-radius: 4px #040d12;
   color: #040d12;
   position: absolute;
   padding: 20px 3rem 20px;
@@ -185,7 +183,7 @@ img {
   font-weight: 500;
   font-size: 16px;
   padding: 30px 0 40px 0;
-  color: #040d12;
+  color: grey;
   text-align: center;
 }
 
@@ -193,12 +191,7 @@ img {
   text-decoration: none;
   color: #ecf9ff;
 }
-a .card-description:hover {
-  color: #ecf9ff;
-}
-.card-link:hover {
-  text-decoration: underline;
-}
+
 /* about page*/
 
 #about {
@@ -207,7 +200,7 @@ a .card-description:hover {
 }
 .aboutpage h2 {
   text-align: center;
-  color: #95bdff;
+  color: #006da4;
   padding: 4rem 30px 20px 3rem;
   font-size: 2.5rem;
   font-family: "Josefin Sans", sans-serif;
@@ -224,7 +217,7 @@ a .card-description:hover {
   text-decoration: none;
 }
 .aboutpage a:hover {
-  color: #9400ff;
+  color: #006da4;
 }
 .aboutpage .no,
 .aboutpage .yes {
@@ -238,11 +231,20 @@ a .card-description:hover {
 .aboutpage .yes {
   color: #ff0063;
 }
-
+.resumeButton {
+  padding: 20px;
+  border-color: #006da4;
+  color: #ffffff;
+  border-radius: 10px;
+  background-color: #032030;
+}
+.resumeButton:hover {
+  color: #006da4;
+  border: 1px #006da4;
+}
 /* contact page */
 #contact {
-  background-color: #272829;
-  padding: 20px;
+  background-color: #030637;
 }
 .contactcontainer {
   color: #b4e4ff;
@@ -282,10 +284,11 @@ a .card-description:hover {
 }
 .home-sci a:hover,
 .list a:hover {
-  background-color: #9400ff;
-  color: #fff;
-  box-shadow: 0 0 20px #9400ff;
+  background-color: #98eecc;
+  color: #e60965;
+  box-shadow: 0 0 20px #98eecc;
 }
+
 .home-sci :active,
 .list a:active {
   transform: translateY(3px);
@@ -335,7 +338,6 @@ a .card-description:hover {
     font-family: "Happy Monkey", cursive;
     font-weight: 400;
     font-size: 35px;
-    color: #dfffd8;
   }
   .homepage p {
     padding: 0 4.5rem 1.5rem;
@@ -393,21 +395,6 @@ a .card-description:hover {
   }
 }
 
-.navbar.response {
-  position: relative;
-}
-.navbar.response a.icon {
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-.navbar.response a {
-  float: none;
-  display: block;
-  text-align: left;
-}
-
 /* small resolution:mobile */
 @media screen and (max-width: 768px) {
   /* navbar */
@@ -416,14 +403,15 @@ a .card-description:hover {
   }
   .navbar a {
     padding: 5px;
-    float: right;
     margin: 1rem;
     display: none;
   }
+
   .navbar a.icon {
     display: inline-block;
     float: none;
   }
+
   /* home page */
   .homepage {
     padding: 5rem 1rem 7rem 2rem;
@@ -447,7 +435,6 @@ a .card-description:hover {
     font-family: "Happy Monkey", cursive;
     font-weight: 700;
     font-size: 20px;
-    color: #dfffd8;
   }
 
   .homepage p {
@@ -461,7 +448,6 @@ a .card-description:hover {
     font-size: 15px;
     padding: 5rem 3.5em 30px;
     text-align: left;
-    color: #9400ff;
   }
 
   .project-sec a::before {
@@ -540,9 +526,11 @@ a .card-description:hover {
   right: 0;
   top: 0;
 }
-
+.navbar.response a.navLink {
+  padding-top: 70px;
+}
 .navbar.response a {
   float: none;
   display: block;
-  text-align: left;
+  text-align: center;
 }

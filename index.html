@@ -30,13 +30,13 @@
   <body>
     <!-- navbar -->
 
-    <div class="navbar" id="mynavbar">
-      <a href="#home" class="active">Home</a>
+    <div id="mynavbar" class="navbar">
+      <a class="navLink" href="#home" class="active">Home</a>
       <a href="#projects">Projects</a>
       <a href="#about">about</a>
       <a href="#contact">contact</a>
       <a class="icon" onclick="toggle()">
-        <i class="fa fa-bars"></i>
+        <i id="iconBar" class="fa fa-bars" onclick="changeIcon()"></i>
       </a>
     </div>
 
@@ -54,7 +54,7 @@
           captivating web experiences. Excited to contribute, adapt, and evolve
           within dynamic development teams.
         </p>
-        <img src="/images/coding.png" alt="coding-img" />
+        <img id="img" src="/images/coding.png" alt="coding-img" />
       </div>
     </section>
     <!-- projects -->
@@ -113,6 +113,30 @@
             </div>
           </a>
         </div>
+        <div class="rows">
+          <a href="https://age-calculator-apau.onrender.com/" class="card-link">
+            <div class="card">
+              <div class="card-content">
+                <h2 class="card-title">Age-Calculator</h2>
+                <p class="card-description">
+                  Calculator: web app Calculate our age
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="rows">
+          <a href="https://countapp.onrender.com/" class="card-link">
+            <div class="card">
+              <div class="card-content">
+                <h2 class="card-title">Counting App</h2>
+                <p class="card-description">
+                  Count App: Another web app just created by using basic js.
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
       </div>
     </section>
     <section id="about">
@@ -152,6 +176,10 @@
           Full-Stack Web Developer . All I'm saying here is, don't give up
           quickly. Learn, code, be consistent, repeat, and you will succeed.
         </p>
+        <!-- <p>
+          Check out my resume, click the button
+          <button class="resumeButton">CLICK HERE!</button>
+        </p> -->
       </div>
     </section>
     <footer id="contact">
@@ -161,14 +189,14 @@
           <h2>Get in touch with me!</h2>
           <div class="home-sci">
             <a href="mailto:kavyadatchayani@gmail.com" target="_blank">
-              <i class="fa-regular fa-envelope"></i
+              <i class="whatsapp fa-regular fa-envelope"></i
             ></a>
             <a
               href="https://www.instagram.com/kreativelyours?igsh=NmZqNGZiM2F4cmdz"
-              ><i class="fa-brands fa-instagram"></i
+              ><i class="insta fa-brands fa-instagram"></i
             ></a>
             <a href="https://github.com/KavyaDatchayani"
-              ><i class="fa-brands fa-github"></i
+              ><i class="git fa-brands fa-github"></i
             ></a>
           </div>
         </div>
